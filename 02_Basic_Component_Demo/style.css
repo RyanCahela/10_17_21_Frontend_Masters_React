@@ -11,3 +11,25 @@
 html {
   font-family: "Open Sans", sans-serif;
 }
+
+/* Component Classes */
+.pet {
+  border: 2px solid gray;
+  width: max-content;
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 1rem;
+}
+
+/* Utility Classes */
+.stack > * + * {
+  --stack-spacing: 1rem;
+  margin-top: var(--stack-spacing);
+}
+
+.stack--small {
+  --stack-spacing: 0.75rem;
+}
+
+.stack--large {
+  --stack-spacing: 2rem;
+}

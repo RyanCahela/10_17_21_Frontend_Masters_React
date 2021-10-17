@@ -1,17 +1,29 @@
-const Pet = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h2", [], "Luna"),
-    React.createElement("h3", [], "Doc"),
-    React.createElement("h3", [], "Havanese"),
+const Pet = ({ name, animalType, breed }) => {
+  return React.createElement("div", { className: "pet stack stack--small" }, [
+    React.createElement("h2", {}, name),
+    React.createElement("h3", {}, animalType),
+    React.createElement("h3", {}, breed),
   ]);
 };
 
 const App = () => {
-  return React.createElement("div", {}, [
+  return React.createElement("div", { className: "stack stack--large" }, [
     React.createElement("h1", {}, "Hello World!"),
-    React.createElement(Pet),
-    React.createElement(Pet),
-    React.createElement(Pet),
+    React.createElement(Pet, {
+      name: "Luna",
+      animalType: "Dog",
+      breed: "Havanese",
+    }),
+    React.createElement(Pet, {
+      name: "Chelsea",
+      animalType: "Dog",
+      breed: "Mix",
+    }),
+    React.createElement(Pet, {
+      name: "Timmy",
+      animalType: "Turtle",
+      breed: "Sea Turtle",
+    }),
   ]);
 };
 
