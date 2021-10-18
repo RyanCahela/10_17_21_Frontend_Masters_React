@@ -24,6 +24,12 @@ body {
   background: gainsboro;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 /* Utility Classes */
 .stack {
   --stack-spacing: 1rem;
