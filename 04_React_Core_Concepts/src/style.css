@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: dimgray;
+}
+
+/* Component Classes */
+.pet {
+  width: max-content;
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 1rem;
+  background: gainsboro;
+}
+
+/* Utility Classes */
+.stack {
+  --stack-spacing: 1rem;
+}
+
+.stack > * + * {
+  margin-top: var(--stack-spacing);
+}
+
+.stack--small > * + * {
+  --stack-spacing: 0.25rem;
+}
+
+.stack--large > * + * {
+  --stack-spacing: 2rem;
+}
